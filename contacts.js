@@ -16,15 +16,17 @@ const listContacts = async () => {
 const getContactById = async (contactId) => {
     const data = await listContacts();
     const result = data.find(contact => contact.id === contactId);
-    return result;
+    return result || null;
+};
+
+const addContact = async (name, email, phone) => {
+  // ...твій код
 };
 
 /* function removeContact(contactId) {
   // ...твій код
 }
  */
-/* function addContact(name, email, phone) {
-  // ...твій код
-} */
+
 
 module.exports = {listContacts,getContactById,};

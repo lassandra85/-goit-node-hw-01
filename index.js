@@ -25,16 +25,18 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
            /*  break; */
 
         case "get":
-          // ... id
-          break;
+        const oneContact = await db.getContactById(id);
+        return console.log(oneContact);
+          /* break; */
     
-        /* case "add":
-          // ... name email phone
-          break; */
+      case "add":
+        const otherContact = await db.addContact({ name, email, phone });
+        return console.log(otherContact);
+          /* break; */
     
-        /* case "remove":
+        case "remove":
           // ... id
-          break; */
+          /* break; */
     
         /* default:
           console.warn("\x1B[31m Unknown action type!"); */
