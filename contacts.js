@@ -39,7 +39,6 @@ const removeContact = async (contactId) => {
 };
 
 
-
 module.exports = {
   listContacts,
   getContactById,
