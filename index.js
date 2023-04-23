@@ -8,6 +8,7 @@ const {
 const { Command } = require("commander");
 
 const program = new Command();
+
 program
   .option("-a, --action <type>", "choose action")
   .option("-i, --id <type>", "user id")
@@ -32,9 +33,7 @@ async function invokeAction ({ action, id, name, email, phone }) {
       case "add":
           await addContact(name, email, phone );
           break;
-    
-      case "remove":
-        await removeContact(id);
+     
         break;
     
       default:
